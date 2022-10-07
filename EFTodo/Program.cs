@@ -16,6 +16,6 @@
     context.SaveChanges();
 
     Console.WriteLine("--- Deleting the blog ---");
-    context.Remove(todo);
+    //context.Remove(todo);
     context.SaveChanges();
 }
