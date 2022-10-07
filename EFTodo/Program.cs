@@ -1,10 +1,14 @@
 ﻿using (var context = new TodoContext())
 {
     Console.WriteLine("--- Inserting a new todo ---");
-    context.Add(new Todo {});
+    context.Add(new Todo{Task ="Faire le ménage",Completed=false});
+    Console.WriteLine("--- Inserting a new todo ---");
+    context.Add(new Todo{Task ="Sortir les poubelles",Completed=false});
+    Console.WriteLine("--- Inserting a new todo ---");
+    context.Add(new Todo{Task ="Aller acheter un chat",Completed=true});
     context.SaveChanges();
 
-    Console.WriteLine("--- Retrieve teh todo with lowest id ---");
+    /*Console.WriteLine("--- Retrieve teh todo with lowest id ---");
     var todo = context.Todo
         .OrderBy(b => b.Id)
         .First();
@@ -17,5 +21,5 @@
 
     Console.WriteLine("--- Deleting the blog ---");
     //context.Remove(todo);
-    context.SaveChanges();
+    context.SaveChanges();*/
 }
